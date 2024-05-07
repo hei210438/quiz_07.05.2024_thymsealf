@@ -13,7 +13,8 @@ public class QQuestions {
     @Basic
     @Column(name = "q_text")
     private String qText;
-    @OneToMany(mappedBy = "qQuestionsByAQuestionId")
+    @OneToMany()
+    @JoinColumn
     private Collection<AAnswers> aAnswersByQId;
 
     public int getqId() {
